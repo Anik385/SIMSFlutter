@@ -9,7 +9,7 @@ class AppTheme {
         colorSchemeSeed: AppColors.primary,
         scaffoldBackgroundColor: AppColors.surfaceLight,
         textTheme: GoogleFonts.interTextTheme(),
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -49,7 +49,7 @@ class AppTheme {
         colorSchemeSeed: AppColors.primary,
         scaffoldBackgroundColor: AppColors.surfaceDark,
         textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),

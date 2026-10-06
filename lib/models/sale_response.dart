@@ -22,7 +22,7 @@ class SaleItemResponse {
         productId: j['productId'] ?? j['product']?['id'],
         productName:
             j['productName'] ?? j['product']?['name'] ?? 'Unknown product',
-        sku: j['sku'] ?? j['product']?['sku'],
+        sku: j['sku'] ?? j['productSku'] ?? j['product']?['sku'],
         quantity: j['quantity'] ?? 0,
         unitPrice: (j['unitPrice'] ?? j['price'] ?? 0).toDouble(),
         subtotal: (j['subtotal'] ?? j['total'] ?? 0).toDouble(),
@@ -54,7 +54,7 @@ class SaleResponse {
 
   factory SaleResponse.fromJson(Map<String, dynamic> j) => SaleResponse(
         id: j['id'] ?? 0,
-        invoiceNumber: j['invoiceNumber'] ?? j['invoiceNo'],
+        invoiceNumber: j['invoiceNumber'] ?? j['invoiceNo'] ?? j['saleNumber'],
         customerName: j['customerName'] ?? j['customer']?['name'],
         createdAt: j['createdAt'] != null
             ? DateTime.tryParse(j['createdAt'].toString())

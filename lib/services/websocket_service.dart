@@ -18,7 +18,9 @@ class WebSocketService {
         onStompError: (f) => print('[WS] stomp: ${f.body}'),
         onDisconnect: (_) => print('[WS] disconnected'),
         stompConnectHeaders: {},
-        webSocketConnectHeaders: {},
+        webSocketConnectHeaders: {
+          'Origin': 'http://192.168.0.158:8080',
+        },
       ),
     );
     _client!.activate();

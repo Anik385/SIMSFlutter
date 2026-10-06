@@ -1,6 +1,7 @@
 class ApiEndpoints {
-  static const String baseUrl = 'http://localhost:8080';
-  static const String wsUrl = 'ws://localhost:8080/ws';
+  static const String baseUrl = 'http://192.168.0.158:8080';
+  // Raw WebSocket endpoint (matches /ws-native above)
+  static const String wsUrl = 'ws://192.168.0.158:8080/ws-native';
 
   // Auth
   static const String login = '/api/v1/auth/login';
@@ -33,5 +34,6 @@ class ApiEndpoints {
   static const String lowStock = '/api/v1/reports/low-stock';
 
   // WebSocket topics
+  // ... rest of your endpoints unchanged
   static const String stockUpdatesTopic = '/topic/stock-updates';
 }
